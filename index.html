@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Fool A Nation - Official Book Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fdfbf7',
+                            100: '#fbf5eb',
+                            200: '#f6e9d2',
+                            300: '#edd6ab',
+                            400: '#e3be7a',
+                            500: '#d4a359',
+                            600: '#b88642',
+                            700: '#946a33',
+                            800: '#79552d',
+                            900: '#644627',
+                        },
+                        rose: {
+                            50: '#fdf2f4',
+                            100: '#fbe8ec',
+                            500: '#e11d48',
+                            600: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
+
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-stone-900 border border-stone-800 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl transform transition-all text-center">
+            <div class="w-16 h-16 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-book-skull"></i>
+            </div>
+            <h3 id="modal-title" class="font-serif text-2xl font-bold text-white mb-2">Success!</h3>
+            <p id="modal-message" class="text-stone-400 mb-6">Item successfully added to your cart.</p>
+            <button onclick="closeModal()" class="w-full bg-amber-500 text-stone-950 py-3 rounded-xl font-semibold hover:bg-amber-400 transition-colors cursor-pointer">Continue Browsing</button>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-stone-950/90 backdrop-blur-md border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-300 flex items-center justify-center text-stone-950 shadow-md group-hover:scale-105 transition-transform p-2 font-bold text-lg">
+                    <i class="fa-solid fa-mask text-stone-950"></i>
+                </div>
+                <span class="font-serif text-2xl font-bold tracking-wide text-white">HowToFool<span class="text-amber-500">ANation</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-stone-400">
+                <a href="#featured" class="hover:text-amber-400 transition-colors">Overview</a>
+                <a href="#insights" class="hover:text-amber-400 transition-colors">Core Insights</a>
+                <a href="#about-book" class="hover:text-amber-400 transition-colors">About Book</a>
+                <a href="#reviews" class="hover:text-amber-400 transition-colors">Reviews</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="addToCart()" class="relative p-2.5 rounded-full bg-stone-900 text-stone-300 hover:bg-stone-800 transition-colors cursor-pointer border border-stone-800" title="Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-500 text-stone-950 text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">1</span>
+                </button>
+                <a href="#buy" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-amber-500 text-stone-950 font-semibold hover:bg-amber-400 transition-all shadow-sm">
+                    Get the Book
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="featured" class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-500/20 to-red-500/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                        
+                        <div class="relative bg-stone-900 p-4 rounded-2xl shadow-2xl border border-stone-800">
+                            <img src="https://m.media-amazon.com/images/I/71OcER6b6XL._SY522_.jpg" 
+                                 alt="How To Fool A Nation Book Cover" 
+                                 class="w-72 sm:w-80 md:w-96 h-auto rounded-lg object-cover shadow-md mx-auto"
+                                 onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=600'">
+                            <div class="mt-4 flex items-center justify-between text-xs text-stone-400 px-1">
+                                <span class="flex items-center text-amber-400 font-semibold"><i class="fa-solid fa-star mr-1"></i> 4.8 / 5.0</span>
+                                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded font-medium">Bestseller Edition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 px-3.5 py-1 rounded-full text-sm font-medium">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>An Unfiltered Look at Public Manipulation</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        How To Fool A Nation
+                    </h1>
+
+                    <p class="text-lg text-stone-400 leading-relaxed">
+                        A piercing examination of mass psychology, systemic narratives, and the mechanisms through which public perception is quietly shaped. Discover what lies beneath the surface of everyday news and societal trends.
+                    </p>
+
+                    <div class="flex items-center space-x-6 py-2">
+                        <div>
+                            <span class="text-3xl font-bold font-serif text-white">$12.99</span>
+                            <span class="text-sm text-stone-500 line-through ml-2">$19.99</span>
+                        </div>
+                        <div class="h-8 w-px bg-stone-800"></div>
+                        <div class="flex items-center space-x-1 text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-stone-300 text-sm font-semibold ml-1">(128 Reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4" id="buy">
+                        <a href="https://www.amazon.com/dp/B0HFFKNY58" target="_blank" rel="noopener noreferrer" 
+                           class="flex-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-semibold py-4 px-8 rounded-xl shadow-lg shadow-amber-500/10 text-center transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-amazon text-xl"></i>
+                            <span>Buy on Amazon</span>
+                        </a>
+                        <button onclick="addToCart()" 
+                                class="flex-1 bg-stone-900 hover:bg-stone-800 text-white font-semibold py-4 px-8 rounded-xl shadow-lg border border-stone-800 text-center transition-all flex items-center justify-center space-x-2 cursor-pointer">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Collection</span>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-800 text-stone-400 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-bolt text-amber-500"></i>
+                            <span>Instant Access</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-halved text-amber-500"></i>
+                            <span>Unabridged Edition</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-book-open-reader text-amber-500"></i>
+                            <span>Global Shipping</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="insights" class="py-16 bg-stone-900 border-y border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl font-bold text-white mb-4">Core Insights Explored</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-stone-400">Unpacking the foundational strategies analyzed inside the pages of *How To Fool A Nation*.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800 shadow-sm">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">The Architecture of Narrative</h3>
+                    <p class="text-stone-400 leading-relaxed">Understand how complex socio-political agendas are distilled into simple, digestible media narratives.</p>
+                </div>
+
+                <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800 shadow-sm">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-eye-low-vision"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Distraction & Direction</h3>
+                    <p class="text-stone-400 leading-relaxed">Examine how widespread attention is routinely managed, steered, and diverted away from core systemic issues.</p>
+                </div>
+
+                <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800 shadow-sm">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-shield-dog"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Developing Critical Immunity</h3>
+                    <p class="text-stone-400 leading-relaxed">Equip yourself with the cognitive tools required to analyze information independently and recognize emotional triggers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-book" class="py-20 bg-stone-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-stone-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-800 flex flex-col md:flex-row items-center gap-8">
+                <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-full bg-amber-500/10 border-2 border-amber-500/30 flex-shrink-0 overflow-hidden shadow-md flex items-center justify-center text-amber-400 text-6xl">
+                    <i class="fa-solid fa-feather"></i>
+                </div>
+                <div class="space-y-4 text-center md:text-left">
+                    <span class="text-amber-400 font-semibold tracking-wider uppercase text-xs">About the Publication</span>
+                    <h3 class="font-serif text-3xl font-bold text-white">Why This Book Matters Now</h3>
+                    <p class="text-stone-400 leading-relaxed">
+                        Published with editorial curation by GoldRoseBooks, *How To Fool A Nation* challenges readers to look beyond conventional headlines. It serves as an essential manual for independent thinkers navigating the modern information landscape.
+                    </p>
+                    <div class="pt-2 flex justify-center md:justify-start space-x-6">
+                        <span class="text-stone-300 text-sm"><i class="fa-solid fa-check text-amber-400 mr-1"></i> Rigorous Analysis</span>
+                        <span class="text-stone-300 text-sm"><i class="fa-solid fa-check text-amber-400 mr-1"></i> Thought-Provoking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-16 bg-stone-900 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl font-bold text-white mb-4">Reader Reviews</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-stone-400">See what readers are saying about the eye-opening contents of *How To Fool A Nation*.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-stone-950 p-6 rounded-2xl border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-400 mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-300 italic mb-4">"An absolute eye-opener. It completely changed how I consume news and evaluate public announcements."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-bold">A</div>
+                        <div>
+                            <h4 class="font-semibold text-white text-sm">Ananya Sharma</h4>
+                            <span class="text-stone-400 text-xs">Verified Reader</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-stone-950 p-6 rounded-2xl border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-400 mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-300 italic mb-4">"Sharp, articulate, and deeply relevant. Every citizen should read this at least once."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <h4 class="font-semibold text-white text-sm">Rahul Verma</h4>
+                            <span class="text-stone-400 text-xs">Verified Reader</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-stone-950 p-6 rounded-2xl border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-400 mb-3 space-x-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-stone-300 italic mb-4">"Could not put it down. Provides incredible clarity in an increasingly noisy media world."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-bold">P</div>
+                        <div>
+                            <h4 class="font-semibold text-white text-sm">Priya Nair</h4>
+                            <span class="text-stone-400 text-xs">Verified Reader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-16 bg-stone-950 text-white border-t border-stone-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="font-serif text-3xl font-bold">Stay Informed</h2>
+            <p class="text-stone-400 max-w-xl mx-auto">Subscribe for updates on upcoming discussions, author Q&As, and special editions.</p>
+            
+            <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
+                <input type="email" required placeholder="Enter your email address" 
+                       class="flex-1 px-4 py-3 rounded-xl bg-stone-900 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-stone-950 text-stone-500 py-12 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-stone-950 font-bold">
+                    <i class="fa-solid fa-mask"></i>
+                </div>
+                <span class="font-serif text-xl font-bold text-white">HowToFoolANation.com</span>
+            </div>
+            
+            <p class="text-sm text-stone-500 text-center">&copy; 2026 HowToFoolANation. All rights reserved. Distributed via Amazon.</p>
+
+            <div class="flex space-x-4 text-lg">
+                <a href="https://www.amazon.com/dp/B0HFFKNY58" target="_blank" class="hover:text-amber-400 transition-colors" title="Amazon Store"><i class="fa-brands fa-amazon"></i></a>
+                <a href="#" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart() {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const message = document.getElementById('modal-message');
+            
+            title.innerText = "Added to Cart!";
+            message.innerText = "'How To Fool A Nation' has been successfully added to your shopping bag.";
+            modal.classList.remove('hidden');
+            
+            const badge = document.getElementById('cart-badge');
+            badge.innerText = parseInt(badge.innerText || '1') + 1;
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const message = document.getElementById('modal-message');
+            
+            title.innerText = "Subscribed Successfully!";
+            message.innerText = "Thank you for joining. Check your inbox soon for updates.";
+            modal.classList.remove('hidden');
+            e.target.reset();
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
