@@ -45,6 +45,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="learning-room/learning.css">
+    <link rel="stylesheet" href="offers-and-doors/doors.css">
 </head>
 <body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
 
@@ -69,22 +70,17 @@
 
     <main>
         <section id="featured" aria-labelledby="book-title" class="scroll-mt-20 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 py-9 sm:py-14 lg:py-16">
-            <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,6rem)_minmax(0,1fr)] items-center gap-x-4 gap-y-7 px-4 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:gap-x-8 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-5 lg:px-8">
-                <div class="col-start-2 row-start-1 space-y-2 lg:col-span-7 lg:col-start-6 lg:self-end">
+            <div class="od-feature-grid mx-auto grid max-w-7xl grid-cols-[minmax(0,6rem)_minmax(0,1fr)] items-center gap-x-4 gap-y-7 px-4 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:gap-x-8 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-5 lg:px-8">
+                <div class="od-title col-start-2 row-start-1 space-y-2 lg:col-span-7 lg:col-start-6 lg:self-end">
                     <p class="text-sm font-medium text-amber-400">By Kate Heidrich</p>
                     <h1 id="book-title" class="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">How to Fool a Nation<span class="sr-only">: </span><span class="mt-1 block text-lg font-normal leading-tight tracking-normal text-amber-400 sm:mt-2 sm:text-3xl lg:text-4xl">A Political Story of America</span></h1>
                 </div>
-                <div class="col-start-1 row-start-1 flex justify-center lg:col-span-5 lg:row-span-2">
+                <div class="od-cover col-start-1 row-start-1 flex justify-center lg:col-span-5 lg:row-span-2">
                     <div class="rounded-xl border border-stone-700/70 bg-stone-900 p-1.5 shadow-2xl sm:rounded-2xl sm:p-3 lg:p-4">
                         <img src="https://m.media-amazon.com/images/I/71OcER6b6XL._SY522_.jpg" alt="How to Fool a Nation by Kate Heidrich, with the red and blue 1964 electoral map on the cover" class="h-auto w-full rounded-md lg:w-80 xl:w-96">
                     </div>
                 </div>
-                <div class="col-span-full space-y-6 lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:self-start">
-                    <div class="space-y-3">
-                        <p class="text-balance font-serif text-2xl leading-snug text-white sm:text-3xl">It was 1865—the year America was supposed to change.</p>
-                        <p class="max-w-2xl text-base leading-relaxed text-stone-300 sm:text-lg">Nearly a century after emancipation, Black Americans were still fighting to vote and to send their children to integrated schools. What happened in between?</p>
-                    </div>
-
+                <div class="od-formats col-span-full space-y-6 lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:self-start">
                     <div id="get-the-book" role="region" aria-labelledby="formats-heading" class="scroll-mt-24 border-t border-stone-700/70 pt-5">
                         <h2 id="formats-heading" class="mb-3 font-serif text-2xl font-bold text-white">Get the Book</h2>
                         <div class="grid gap-3 min-[440px]:grid-cols-2">
@@ -126,6 +122,16 @@
                 </div>
             </div>
                 </div>
+                <aside class="od-entrance" aria-label="Offers and Doors">
+                    <a class="od-entry-link" href="offers-and-doors/" aria-label="Offers and Doors. Tap to explore other sites and stores.">
+                        <span class="od-face">
+                            <span class="od-plaque">Offers<br>&amp; Doors</span>
+                            <span class="od-inscription">Tap to explore<br>other sites<br>&amp; stores.</span>
+                            <span class="od-handle" aria-hidden="true"></span>
+                        </span>
+                    </a>
+                    <a class="od-join-link" href="offers-and-doors/get-your-door.html">Get your door</a>
+                </aside>
             </div>
         </section>
 
