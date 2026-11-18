@@ -44,6 +44,7 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="learning-room/learning.css">
 </head>
 <body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
 
@@ -56,8 +57,10 @@
             <nav aria-label="Page sections" class="hidden items-center gap-8 font-medium text-stone-300 xl:flex">
                 <a href="#featured" class="hover:text-amber-400">Overview</a>
                 <a href="#about-book" class="hover:text-amber-400">About the Book</a>
+                <a href="learning-room/" class="hover:text-amber-400">Learning Room</a>
             </nav>
-            <nav aria-label="Book and show" class="flex shrink-0 items-center gap-2 sm:gap-3">
+            <nav aria-label="Featured links" class="flex shrink-0 items-center gap-2 sm:gap-3">
+                <a href="learning-room/" class="hidden min-h-11 items-center px-2 text-sm font-medium text-stone-300 hover:text-amber-400 sm:inline-flex xl:hidden">Learning Room</a>
                 <a href="#get-the-book" class="inline-flex min-h-11 items-center justify-center rounded-xl bg-amber-500 px-3 text-sm font-semibold text-stone-950 hover:bg-amber-400 sm:px-5">Get the Book</a>
                 <a href="#show" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-stone-600 px-3 text-sm font-semibold text-white hover:border-amber-400 hover:text-amber-300 sm:px-5"><i class="fa-solid fa-play hidden text-xs min-[360px]:inline-block" aria-hidden="true"></i>Watch the Show</a>
             </nav>
@@ -180,6 +183,29 @@
                     <p>From the abolition of slavery and the fight for civil rights to the expansion of welfare programs, debates over abortion, immigration, and LGBTQ rights, and the pursuit of economic opportunity, this book examines the moral and political struggles that have shaped America’s political identities.</p>
                     <p>But this is not simply a story of political upheaval—it is a story of morality: how it evolves, how it is shaped, and how it transcends any single ideology or institution.</p>
                     <p>This book invites readers to look again at America’s past to understand its present—and to consider the moral, political, and economic questions that will shape its future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lr-room" id="learning-room" aria-labelledby="learning-title">
+            <div class="lr-room-inner">
+                <h2 class="lr-room-title" id="learning-title"><a href="learning-room/">Learning Room</a></h2>
+                <p class="lr-room-intro">Explore 43 U.S. presidential elections, from 1856 to 2024, one card at a time.</p>
+                <div class="lr-decks">
+                    <a class="lr-tile" href="learning-room/elections.html" aria-labelledby="tile-election" aria-describedby="description-election">
+                        <img src="learning-room/election-cover.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+                        <div><h3 id="tile-election">Presidential Elections</h3>
+                            <p id="description-election">See who ran against whom, who won, and how the electoral votes were cast.</p>
+                            <span class="lr-open">Open deck</span>
+                        </div>
+                    </a>
+                    <a class="lr-tile" href="learning-room/education-careers.html" aria-labelledby="tile-career" aria-describedby="description-career">
+                        <img src="learning-room/career-cover.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+                        <div><h3 id="tile-career">Presidential Education &amp; Careers</h3>
+                            <p id="description-career">Explore where each election winner studied and what they did before becoming president.</p>
+                            <span class="lr-open">Open deck</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
