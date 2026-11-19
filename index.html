@@ -45,7 +45,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="learning-room/learning.css">
-    <link rel="stylesheet" href="offers-and-doors/doors.css">
+    <link rel="stylesheet" href="offers-and-doors/doors.css?v=book-formats-2">
 </head>
 <body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
 
@@ -69,69 +69,72 @@
     </header>
 
     <main>
-        <section id="featured" aria-labelledby="book-title" class="scroll-mt-20 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 py-9 sm:py-14 lg:py-16">
-            <div class="od-feature-grid mx-auto grid max-w-7xl grid-cols-[minmax(0,6rem)_minmax(0,1fr)] items-center gap-x-4 gap-y-7 px-4 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:gap-x-8 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-5 lg:px-8">
-                <div class="od-title col-start-2 row-start-1 space-y-2 lg:col-span-7 lg:col-start-6 lg:self-end">
-                    <p class="text-sm font-medium text-amber-400">By Kate Heidrich</p>
+        <section id="featured" aria-labelledby="book-title" class="scroll-mt-20 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 py-8 sm:py-10 lg:py-12">
+            <div class="book-feature-grid">
+                <div class="book-heading">
                     <h1 id="book-title" class="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">How to Fool a Nation<span class="sr-only">: </span><span class="mt-1 block text-lg font-normal leading-tight tracking-normal text-amber-400 sm:mt-2 sm:text-3xl lg:text-4xl">A Political Story of America</span></h1>
+                    <p class="mt-3 text-sm font-medium text-amber-400 sm:text-base">By Kate Heidrich</p>
                 </div>
-                <div class="od-cover col-start-1 row-start-1 flex justify-center lg:col-span-5 lg:row-span-2">
-                    <div class="rounded-xl border border-stone-700/70 bg-stone-900 p-1.5 shadow-2xl sm:rounded-2xl sm:p-3 lg:p-4">
-                        <img src="https://m.media-amazon.com/images/I/71OcER6b6XL._SY522_.jpg" alt="How to Fool a Nation by Kate Heidrich, with the red and blue 1964 electoral map on the cover" class="h-auto w-full rounded-md lg:w-80 xl:w-96">
+                <div class="book-cover">
+                    <div class="rounded-xl border border-stone-700/70 bg-stone-900 p-1.5 shadow-2xl sm:rounded-2xl sm:p-3">
+                        <img src="https://m.media-amazon.com/images/I/71OcER6b6XL._SY522_.jpg" alt="How to Fool a Nation by Kate Heidrich, with the red and blue 1964 electoral map on the cover" class="block h-auto w-full rounded-md">
                     </div>
                 </div>
-                <div class="od-formats col-span-full space-y-6 lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:self-start">
-                    <div id="get-the-book" role="region" aria-labelledby="formats-heading" class="scroll-mt-24 border-t border-stone-700/70 pt-5">
+                <div class="book-shopping">
+                    <section id="get-the-book" aria-labelledby="formats-heading" class="book-stores scroll-mt-24">
                         <h2 id="formats-heading" class="mb-3 font-serif text-2xl font-bold text-white">Get the Book</h2>
-                        <div class="grid gap-3 min-[440px]:grid-cols-2">
-                            <div class="rounded-xl border border-amber-500/35 bg-stone-900 px-4 pt-3">
-                                <h3 class="flex items-center gap-2 font-semibold text-white"><i class="fa-solid fa-book text-amber-400" aria-hidden="true"></i>Paperback</h3>
-                                <div class="flex flex-wrap items-center gap-x-4">
-                                    <a href="https://www.booksamillion.com/p/How-Fool-Nation/Kate-Heidrich/9798952303027" target="_blank" rel="noopener noreferrer" aria-label="Paperback at Books-A-Million" class="inline-flex min-h-11 items-center text-sm font-medium text-amber-300 underline decoration-amber-500/50 underline-offset-4 hover:text-white">Books-A-Million</a>
-                                    <a href="https://www.amazon.com/dp/B0HFLKLSSS" target="_blank" rel="noopener noreferrer" aria-label="Paperback at Amazon" class="inline-flex min-h-11 items-center text-sm font-medium text-amber-300 underline decoration-amber-500/50 underline-offset-4 hover:text-white">Amazon</a>
+                        <div class="book-format-list">
+                            <div class="book-format-card">
+                                <h3><i class="fa-solid fa-book" aria-hidden="true"></i>Paperback</h3>
+                                <div class="book-format-links">
+                                    <a href="https://www.booksamillion.com/p/How-Fool-Nation/Kate-Heidrich/9798952303027" target="_blank" rel="noopener noreferrer" aria-label="Paperback at Books-A-Million">Books-A-Million</a>
+                                    <a href="https://www.amazon.com/dp/B0HFLKLSSS" target="_blank" rel="noopener noreferrer" aria-label="Paperback at Amazon">Amazon</a>
                                 </div>
                             </div>
-                            <div class="rounded-xl border border-stone-700 bg-stone-900 px-4 pt-3">
-                                <h3 class="flex items-center gap-2 font-semibold text-white"><i class="fa-solid fa-headphones text-amber-400" aria-hidden="true"></i>Audiobook</h3>
-                                <a href="https://play.google.com/store/audiobooks/details/Kate_Heidrich_How_to_Fool_a_Nation?id=AQAAAECGRj8GqM" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center text-sm font-medium text-amber-300 underline decoration-amber-500/50 underline-offset-4 hover:text-white">Listen to a sample</a>
+                            <div class="book-format-card">
+                                <h3><i class="fa-solid fa-tablet-screen-button" aria-hidden="true"></i>Ebook</h3>
+                                <div class="book-format-links">
+                                    <a href="https://www.amazon.com/dp/B0HFFKNY58" target="_blank" rel="noopener noreferrer" aria-label="Ebook at Amazon Kindle">Amazon Kindle</a>
+                                    <a href="https://apple.co/4qMV6HI" target="_blank" rel="noopener noreferrer" aria-label="Ebook at Apple Books">Apple Books</a>
+                                    <a href="https://play.google.com/store/books/details/Kate_Heidrich_How_to_Fool_a_Nation?id=hjwCEgAAQBAJ" target="_blank" rel="noopener noreferrer" aria-label="Ebook at Google Play Books">Google Play Books</a>
+                                </div>
+                            </div>
+                            <div class="book-format-card">
+                                <h3><i class="fa-solid fa-headphones" aria-hidden="true"></i>Audiobook</h3>
+                                <div class="book-format-links">
+                                    <a href="https://play.google.com/store/audiobooks/details/Kate_Heidrich_How_to_Fool_a_Nation?id=AQAAAECGRj8GqM" target="_blank" rel="noopener noreferrer" aria-label="Listen to an audiobook sample on Google Play Books">Listen to a sample</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-2 flex flex-wrap items-center gap-x-4">
-                            <h3 class="font-semibold text-white">Ebook</h3>
-                            <a href="https://www.amazon.com/dp/B0HFFKNY58" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center text-sm text-stone-200 underline decoration-stone-500 underline-offset-4 hover:text-amber-300">Amazon Kindle</a>
-                            <a href="https://apple.co/4qMV6HI" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center text-sm text-stone-200 underline decoration-stone-500 underline-offset-4 hover:text-amber-300">Apple Books</a>
-                            <a href="https://play.google.com/store/books/details/Kate_Heidrich_How_to_Fool_a_Nation?id=hjwCEgAAQBAJ" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center text-sm text-stone-200 underline decoration-stone-500 underline-offset-4 hover:text-amber-300">Google Play Books</a>
+                    </section>
+                    <aside class="od-entrance" aria-label="Offers and Doors">
+                        <a class="od-entry-link" href="offers-and-doors/" aria-label="Offers and Doors. Tap to explore other sites and stores.">
+                            <span class="od-face">
+                                <span class="od-plaque">Offers<br>&amp; Doors</span>
+                                <span class="od-inscription">Tap to explore<br>other sites<br>&amp; stores.</span>
+                                <span class="od-handle" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                        <a class="od-join-link" href="offers-and-doors/get-your-door.html">Get your door</a>
+                    </aside>
+                    <div class="book-share">
+                        <span class="text-xs uppercase tracking-wider text-stone-400 font-semibold">Share:</span>
+                        <div class="book-share-links">
+                            <a href="https://twitter.com/intent/tweet?text=Check%20out%20How%20to%20Fool%20a%20Nation%3A%20A%20Political%20Story%20of%20America%20by%20Kate%20Heidrich!" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on X">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhowtofoolanation.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on Facebook">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhowtofoolanation.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on LinkedIn">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors cursor-pointer" title="Copy Link">
+                                <i class="fa-solid fa-link text-sm"></i>
+                            </button>
                         </div>
                     </div>
-
-            <div class="pt-2 flex items-center space-x-3">
-                <span class="text-xs uppercase tracking-wider text-stone-400 font-semibold">Share:</span>
-                <div class="flex space-x-2">
-                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20How%20to%20Fool%20a%20Nation%3A%20A%20Political%20Story%20of%20America%20by%20Kate%20Heidrich!" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on X">
-                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhowtofoolanation.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on Facebook">
-                        <i class="fa-brands fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhowtofoolanation.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Share on LinkedIn">
-                        <i class="fa-brands fa-linkedin-in text-sm"></i>
-                    </a>
-                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors cursor-pointer" title="Copy Link">
-                        <i class="fa-solid fa-link text-sm"></i>
-                    </button>
                 </div>
-            </div>
-                </div>
-                <aside class="od-entrance" aria-label="Offers and Doors">
-                    <a class="od-entry-link" href="offers-and-doors/" aria-label="Offers and Doors. Tap to explore other sites and stores.">
-                        <span class="od-face">
-                            <span class="od-plaque">Offers<br>&amp; Doors</span>
-                            <span class="od-inscription">Tap to explore<br>other sites<br>&amp; stores.</span>
-                            <span class="od-handle" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <a class="od-join-link" href="offers-and-doors/get-your-door.html">Get your door</a>
-                </aside>
             </div>
         </section>
 
