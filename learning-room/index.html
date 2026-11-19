@@ -8,6 +8,8 @@
     <link rel="canonical" href="https://www.howtofoolanation.com/learning-room/">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap">
     <link rel="stylesheet" href="learning.css">
+    <link rel="stylesheet" href="study.css">
+    <script type="module" src="study.js"></script>
 </head>
 <body class="lr-page">
 <header class="lr-bar">
@@ -20,7 +22,7 @@
 <section class="lr-room" id="learning-room" aria-labelledby="learning-title">
     <div class="lr-room-inner">
         <h1 class="lr-room-title" id="learning-title">Learning Room</h1>
-        <p class="lr-room-intro">Explore 43 U.S. presidential elections, from 1856 to 2024, one card at a time.</p>
+        <p class="lr-room-intro">Explore 43 U.S. presidential elections, from 1856 to 2024. Open decks together to compare their cards.</p>
         <div class="lr-decks">
             <a class="lr-tile" href="elections.html" aria-labelledby="tile-election" aria-describedby="description-election">
                 <img src="election-cover.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
@@ -39,6 +41,52 @@
         </div>
     </div>
 </section>
+<template id="study-workspace">
+    <section class="study-room" aria-labelledby="study-title" id="learning-room">
+        <header class="study-heading">
+            <h1 class="lr-room-title" id="study-title">Learning Room</h1>
+            <button type="button" class="study-text-button study-open-all">Open all decks</button>
+        </header>
+        <p id="study-tip" class="study-tip">Open a deck to study it, or open several to compare. Swipe each card left or right to change its year.</p>
+        <details class="study-chooser" open>
+            <summary>Choose decks <span class="study-selection-count"></span></summary>
+            <div class="study-deck-list" role="group" aria-label="Choose open decks"></div>
+        </details>
+        <div class="study-grid"></div>
+        <p class="lr-vh study-status" role="status" aria-atomic="true"></p>
+    </section>
+</template>
+<template id="study-panel">
+    <article class="study-panel">
+        <header class="study-panel-heading">
+            <h2></h2>
+            <button type="button" class="study-close"><span aria-hidden="true">×</span></button>
+        </header>
+        <div class="study-pending">
+            <p role="status">Loading cards…</p>
+            <button type="button" class="study-text-button study-retry" hidden>Try again</button>
+        </div>
+        <div class="study-content" hidden>
+            <figure class="study-card">
+                <img class="study-image" alt="" width="1080" height="1920" loading="lazy" decoding="async" draggable="false" tabindex="0" aria-describedby="study-tip">
+            </figure>
+            <div class="study-controls">
+                <button type="button" class="study-prev">Previous</button>
+                <select class="study-year"></select>
+                <button type="button" class="study-next">Next</button>
+            </div>
+            <p class="study-card-status lr-vh" role="status" aria-atomic="true"></p>
+            <div class="study-tools">
+                <details class="study-text">
+                    <summary>Read card text</summary>
+                    <div class="lr-transcript"></div>
+                </details>
+                <a class="study-full lr-text-link" target="_blank" rel="noopener">Full-size card<span class="lr-vh"> in a new tab</span></a>
+            </div>
+            <button type="button" class="study-match study-text-button" hidden></button>
+        </div>
+    </article>
+</template>
 </main>
 </body>
 </html>
