@@ -45,7 +45,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="learning-room/learning.css">
-    <link rel="stylesheet" href="offers-and-doors/doors.css?v=book-formats-2">
+    <link rel="stylesheet" href="offers-and-doors/doors.css?v=christmas-ebook-2026">
 </head>
 <body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
 
@@ -71,9 +71,22 @@
     <main>
         <section id="featured" aria-labelledby="book-title" class="scroll-mt-20 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 py-8 sm:py-10 lg:py-12">
             <div class="book-feature-grid">
-                <div class="book-heading">
-                    <h1 id="book-title" class="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">How to Fool a Nation<span class="sr-only">: </span><span class="mt-1 block text-lg font-normal leading-tight tracking-normal text-amber-400 sm:mt-2 sm:text-3xl lg:text-4xl">A Political Story of America</span></h1>
-                    <p class="mt-3 text-sm font-medium text-amber-400 sm:text-base">By Kate Heidrich</p>
+                <div class="book-heading-row">
+                    <div class="book-heading">
+                        <h1 id="book-title" class="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">How to Fool a Nation<span class="sr-only">: </span><span class="mt-1 block text-lg font-normal leading-tight tracking-normal text-amber-400 sm:mt-2 sm:text-3xl lg:text-4xl">A Political Story of America</span></h1>
+                        <p class="mt-3 text-sm font-medium text-amber-400 sm:text-base">By Kate Heidrich</p>
+                    </div>
+                    <aside id="christmas-ebook-sale" class="ebook-sale" aria-labelledby="ebook-sale-title" hidden>
+                        <div>
+                            <h2 id="ebook-sale-title"><i class="fa-solid fa-gift" aria-hidden="true"></i>Christmas ebook sale</h2>
+                            <p class="ebook-sale-prices"><strong><span class="sr-only">Sale price </span>$3.99</strong><s><span class="sr-only">Regular price </span>$12.99</s></p>
+                            <p class="ebook-sale-dates">U.S. · <span id="ebook-sale-period">Starts Nov 27, ends</span> <time datetime="2026-12-31">Dec 31</time></p>
+                        </div>
+                        <div class="ebook-sale-links">
+                            <a href="https://apple.co/4qMV6HI" target="_blank" rel="noopener noreferrer">Apple Books</a>
+                            <a href="https://play.google.com/store/books/details/Kate_Heidrich_How_to_Fool_a_Nation?id=hjwCEgAAQBAJ" target="_blank" rel="noopener noreferrer">Google Play Books</a>
+                        </div>
+                    </aside>
                 </div>
                 <div class="book-cover">
                     <div class="rounded-xl border border-stone-700/70 bg-stone-900 p-1.5 shadow-2xl sm:rounded-2xl sm:p-3">
@@ -238,5 +251,29 @@
         </div>
     </footer>
 
+    <script>
+        (() => {
+            const sale = document.getElementById('christmas-ebook-sale');
+            const period = document.getElementById('ebook-sale-period');
+            const starts = Date.parse('2026-11-27T00:00:00-06:00');
+            const ends = Date.parse('2027-01-01T00:00:00-06:00');
+            let timer;
+
+            function updateSale() {
+                clearTimeout(timer);
+                const now = Date.now();
+                sale.hidden = now >= ends;
+                if (sale.hidden) return;
+
+                const upcoming = now < starts;
+                period.textContent = upcoming ? 'Starts Nov 27, ends' : 'Through';
+                const nextChange = upcoming ? starts : ends;
+                timer = setTimeout(updateSale, Math.min(nextChange - now, 86400000));
+            }
+
+            updateSale();
+            window.addEventListener('pageshow', updateSale);
+        })();
+    </script>
 </body>
 </html>
