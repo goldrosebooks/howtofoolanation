@@ -47,6 +47,51 @@
     padding-inline: clamp(1rem, 3.25vw, 2rem);
 }
 .book-heading { grid-area: heading; min-width: 0; }
+.book-heading-row { display: contents; }
+.ebook-sale {
+    grid-area: sale;
+    min-width: 0;
+    padding: .7rem .9rem .2rem;
+    border: 1px solid #796640;
+    border-radius: .7rem;
+    background: linear-gradient(120deg, #1d3028, #15231e);
+    color: #fff6e3;
+}
+.ebook-sale[hidden] { display: none; }
+.ebook-sale h2 {
+    margin: 0;
+    color: #f7d798;
+    font: 650 .79rem/1.4 Inter, system-ui, sans-serif;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
+.ebook-sale h2 i { margin-inline-end: .4rem; }
+.ebook-sale-prices { display: flex; align-items: baseline; gap: .65rem; margin: .1rem 0; }
+.ebook-sale-prices strong { font: 700 2.2rem/1.08 'Playfair Display', Georgia, serif; }
+.ebook-sale-prices s { color: #d9cdb8; font-size: .94rem; }
+.ebook-sale-dates { margin: .25rem 0 0; color: #eee4d2; font-size: .82rem; line-height: 1.4; }
+.ebook-sale-links { display: flex; flex-wrap: wrap; gap: 0 .85rem; }
+.ebook-sale-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: #ffdc92;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+.ebook-sale-links a:hover { color: #fff6e4; }
+.ebook-sale-links a:focus-visible { outline: 2px solid #ffdc92; outline-offset: 2px; border-radius: 2px; }
+@media (width < 52rem) {
+    .book-feature-grid:has(.ebook-sale:not([hidden])) {
+        grid-template-areas: "cover heading" "sale sale" "shopping shopping";
+    }
+}
+@media (30rem <= width < 52rem) {
+    .ebook-sale { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding-block: .5rem; }
+    .ebook-sale-links { flex-direction: column; align-items: start; }
+}
 .book-cover { grid-area: cover; min-width: 0; }
 .book-shopping {
     grid-area: shopping;
@@ -107,6 +152,20 @@
         grid-template-areas: "cover heading" "cover shopping";
         grid-template-rows: auto 1fr;
     }
+    .book-heading-row {
+        grid-area: heading;
+        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .ebook-sale { width: 15.8rem; max-width: 100%; }
+}
+@media (64rem <= width < 81rem) {
+    .book-heading-row:has(.ebook-sale:not([hidden])) #book-title { font-size: clamp(2.4rem, calc(7.5vw - 2.4rem), 3.75rem); }
+    .book-heading-row:has(.ebook-sale:not([hidden])) #book-title .block { font-size: .6em; }
 }
 .od-page { background: #faf4e8; color: #29271f; color-scheme: light; }
 .od-page main { max-width: 70rem; margin: 0 auto; padding: clamp(2.4rem,6vw,5rem) clamp(1rem,4vw,3rem); }
