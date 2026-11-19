@@ -133,3 +133,23 @@
     .od-face { transform-origin: left; transition: transform 150ms ease-out; }
     .od-entry-link:hover .od-face, .od-tile:hover .od-face { transform: perspective(700px) rotateY(-5deg); }
 }
+
+.od-ways { max-width: 52rem; margin: 0 0 2rem; }
+.od-ways h2 { margin: 0; font: 700 1.55rem/1.2 'Playfair Display', Georgia, serif; }
+.od-ways-intro { margin: .5rem 0 1rem; line-height: 1.55; color: #514a3e; }
+.od-ways-options {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid #d6cebb;
+    border-radius: .75rem;
+    background: #fffaf0;
+}
+.od-ways-options h3 { margin: 0; color: #20533c; font-size: 1.08rem; line-height: 1.4; }
+.od-ways-options p { margin: .35rem 0 0; line-height: 1.55; color: #403a31; }
+.od-ways-options a { color: #20533c; text-decoration: underline; text-underline-offset: .15em; overflow-wrap: anywhere; }
+.od-ways-options > div + div { border-top: 1px solid #d6cebb; padding-top: 1rem; }
+@media (min-width: 40rem) {
+    .od-ways-options { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.5rem; }
+    .od-ways-options > div + div { border-top: 0; border-left: 1px solid #d6cebb; padding: 0 0 0 1.5rem; }
+}
