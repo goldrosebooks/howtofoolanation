@@ -18,8 +18,16 @@
         const anchor = item.querySelector('a');
         anchor.href = url.href;
         item.querySelector('.od-plaque').textContent = entry.name.trim();
-        item.querySelector('.od-inscription').textContent = typeof entry.description === 'string' && entry.description.trim()
+        const inscription = item.querySelector('.od-inscription');
+        inscription.textContent = typeof entry.description === 'string' && entry.description.trim()
             ? entry.description.trim() : url.hostname;
+        if (entry.sponsored === true) {
+            anchor.relList.add('sponsored');
+            const disclosure = document.createElement('span');
+            disclosure.className = 'od-sponsored';
+            disclosure.textContent = 'Sponsored';
+            inscription.prepend(disclosure);
+        }
         return item;
     }
 
