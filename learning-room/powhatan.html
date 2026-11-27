@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Powhatan Quiz · This Land Is Whose Land? | Learning Room</title>
+  <meta name="description" content="Play 18 questions from the Powhatan episode of Let’s Party with Callan and Shane.">
+  <link rel="canonical" href="https://www.howtofoolanation.com/learning-room/powhatan.html">
+  <link rel="stylesheet" href="powhatan-quiz.css">
+  <script defer src="powhatan-quiz.js"></script>
+</head>
+<body>
+  <nav class="quiz-nav" aria-label="Website"><a href="./">Back to the Learning Room</a></nav>
+  <main>
+<div id="powhatan-learning-room">
+  <section class="pq-shell" aria-label="Powhatan episode history quiz">
+    <div class="pq-brand"><span>Learning Room</span><span>Season 1 · Episode 1</span></div>
+    <div class="pq-cover">
+      <img class="pq-cover-art" src="powhatan-episode-cover.jpg" alt="Powhatan in the studio with Callan and Shane">
+      <div class="pq-intro">
+        <p class="pq-series">Let’s Party with Callan and Shane</p>
+        <h1>This Land Is Whose Land?</h1>
+        <p class="pq-desc">Powhatan and Jamestown · 18 questions from the full episode</p>
+        <div class="pq-actions"><button class="pq-main" data-action="start" type="button">Play the deck</button><button class="pq-plain" data-action="browse" type="button">Browse all cards</button></div>
+      </div>
+    </div>
+    <div class="pq-quiz" hidden>
+      <div class="pq-hud"><b class="pq-count"></b><button type="button" class="pq-sound" aria-label="Sound" aria-pressed="true">Sound on</button></div>
+      <div class="pq-track" aria-hidden="true"><div class="pq-progress"></div></div>
+      <div class="pq-panel">
+        <figure class="pq-art"><img class="pq-illustration" alt=""></figure>
+        <div class="pq-body">
+          <p class="pq-series pq-chapter"></p>
+          <h3 tabindex="-1" class="pq-question"></h3>
+          <div class="pq-options"></div>
+          <div class="pq-feedback" role="status" aria-live="polite"></div>
+          <button class="pq-main pq-next" type="button" hidden>Next card</button>
+        </div>
+      </div>
+    </div>
+    <div class="pq-end" hidden>
+      <p class="pq-series">Powhatan and Jamestown</p><h2 tabindex="-1">Deck complete</h2>
+      <p class="pq-score pq-desc"></p>
+      <div class="pq-actions"><button class="pq-main" data-action="start" type="button">Play again</button><button class="pq-plain" data-action="browse" type="button">Browse all cards</button></div>
+    </div>
+    <div class="pq-list" hidden>
+      <p class="pq-series">Powhatan and Jamestown</p><h2 tabindex="-1">All 18 cards</h2>
+      <p class="pq-desc">Tap a question to see its choices and answer.</p>
+      <div><button class="pq-main" data-action="start" type="button">Play the deck</button></div>
+      <div class="pq-cards"></div>
+    </div>
+  </section>
+</div>
+    <noscript>Turn on JavaScript to play the Powhatan quiz.</noscript>
+  </main>
+</body>
+</html>

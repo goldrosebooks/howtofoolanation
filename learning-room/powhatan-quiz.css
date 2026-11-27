@@ -1,0 +1,54 @@
+html { color-scheme: dark; background: #191614; }
+body { margin: 0; color: #f6f3e6; font-family: system-ui, sans-serif; }
+.quiz-nav { max-width: 820px; margin: 0 auto; padding: 1rem; }
+.quiz-nav a { color: #f6df9f; }
+.inside-learning-room .quiz-nav { display: none; }
+.inside-learning-room { background: #26211e; }
+.inside-learning-room #powhatan-learning-room { padding: 0; }
+#powhatan-learning-room{padding:clamp(4px,1.5vw,12px);color-scheme:light dark;font-family:Arial,Helvetica,sans-serif}
+    #powhatan-learning-room *{box-sizing:border-box}
+    #powhatan-learning-room [hidden]{display:none!important}
+    #powhatan-learning-room .pq-shell{color:#f6f3e6;background:#171e1a;border:1px solid #485246;border-radius:15px;overflow:hidden;max-width:820px;margin:auto}
+    #powhatan-learning-room .pq-brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 17px;border-bottom:1px solid #394239;color:#d8dfcf;background:#1e2720;font-size:13px;letter-spacing:.04em}
+    #powhatan-learning-room .pq-brand span:first-child{font-weight:700}
+    #powhatan-learning-room .pq-brand span:last-child{font-size:12px;color:#ded3a7}
+    #powhatan-learning-room h1,#powhatan-learning-room h2,#powhatan-learning-room h3,#powhatan-learning-room p{margin:0}
+    #powhatan-learning-room .pq-cover img{display:block;width:100%;height:auto;max-height:380px;object-fit:contain;background:#141814}
+    #powhatan-learning-room .pq-intro{padding:clamp(18px,4vw,30px);display:grid;gap:9px}
+    #powhatan-learning-room .pq-series{font-size:13px;color:#e6d398;font-weight:600}
+    #powhatan-learning-room .pq-intro h1,#powhatan-learning-room .pq-end h2,#powhatan-learning-room .pq-list h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;color:#f6e8b6;font-size:clamp(27px,4.4vw,38px);line-height:1.08}
+    #powhatan-learning-room .pq-desc{font-size:15px;color:#d3dbcf;line-height:1.45}
+    #powhatan-learning-room .pq-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 15px;margin-top:7px}
+    #powhatan-learning-room button{font:inherit;touch-action:manipulation;cursor:pointer}
+    #powhatan-learning-room button:disabled{cursor:default}
+    #powhatan-learning-room button:focus-visible,#powhatan-learning-room summary:focus-visible{outline:3px solid #c4f88a;outline-offset:3px}
+    #powhatan-learning-room .pq-main{border:0;border-radius:8px;background:#b7ee7c;color:#17230f;padding:12px 20px;font-size:15px;font-weight:700;min-height:44px}
+    #powhatan-learning-room .pq-plain{background:transparent;color:#e6e8df;padding:8px 2px;border:0;font-size:14px;text-decoration:underline;text-underline-offset:3px;min-height:44px}
+    #powhatan-learning-room .pq-hud{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    #powhatan-learning-room .pq-hud b{font-size:14px;font-weight:600}
+    #powhatan-learning-room .pq-sound{color:#e6e8df;font-size:13px;min-height:36px;border:1px solid #606c5f;border-radius:20px;background:#242e25;padding:6px 13px}
+    #powhatan-learning-room .pq-track{height:3px;background:#384335}
+    #powhatan-learning-room .pq-progress{height:100%;background:#a5d675;width:0}
+    #powhatan-learning-room .pq-panel{display:grid;grid-template-columns:minmax(108px,29%) minmax(0,1fr)}
+    #powhatan-learning-room .pq-art{margin:0;background:#283129;position:relative;min-height:100%;overflow:hidden}
+    #powhatan-learning-room .pq-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+    #powhatan-learning-room .pq-body{display:grid;align-content:start;gap:13px;padding:clamp(15px,3.2vw,24px)}
+    #powhatan-learning-room .pq-body h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,3.5vw,31px);font-weight:500;line-height:1.19;color:#fff5d4}
+    #powhatan-learning-room .pq-options{display:grid;gap:8px}
+    #powhatan-learning-room .pq-option{border:1px solid #5d675a;background:#263027;border-radius:8px;color:#f3f3ea;text-align:left;display:flex;gap:10px;align-items:center;width:100%;padding:9px 10px;font-size:15px;line-height:1.35;min-height:46px}
+    #powhatan-learning-room .pq-option:hover:enabled{background:#344232;border-color:#a5c789}
+    #powhatan-learning-room .pq-letter{display:grid;place-items:center;border:1px solid #71816b;border-radius:5px;width:26px;height:26px;flex:0 0 26px;color:#dfe8d2;font-size:13px;font-weight:700}
+    #powhatan-learning-room .pq-option[data-result=right]{background:#2d4125;border-color:#b1da8c}
+    #powhatan-learning-room .pq-option[data-result=wrong]{background:#382e28;border-color:#bd927c}
+    #powhatan-learning-room .pq-feedback{color:#e2e9d9;font-size:14px;line-height:1.45}
+    #powhatan-learning-room .pq-feedback:empty{display:none}
+    #powhatan-learning-room .pq-feedback strong{display:block;color:#c5e4a5;margin-bottom:3px}
+    #powhatan-learning-room .pq-feedback strong.pq-wrong{color:#f0be9e}
+    #powhatan-learning-room .pq-next{justify-self:start}
+    #powhatan-learning-room .pq-end,#powhatan-learning-room .pq-list{padding:clamp(18px,4vw,28px);display:grid;gap:12px}
+    #powhatan-learning-room .pq-cards{display:grid;gap:5px}
+    #powhatan-learning-room details{border-bottom:1px solid #424c40;padding:5px 1px}
+    #powhatan-learning-room summary{cursor:pointer;color:#f4f0df;line-height:1.4;padding:8px 1px;font-size:15px}
+    #powhatan-learning-room details ol{padding-left:32px;margin:5px 0;line-height:1.5;color:#dce3d6;font-size:14px}
+    #powhatan-learning-room details p{padding:5px 6px 11px;line-height:1.5;color:#e4d7b4;font-size:14px}
+    @media(max-width:530px){#powhatan-learning-room .pq-panel{display:flex;flex-direction:column}#powhatan-learning-room .pq-art{min-height:0;height:107px}#powhatan-learning-room .pq-art img{object-position:50% 39%}#powhatan-learning-room .pq-body{gap:11px}#powhatan-learning-room .pq-brand{padding:10px 12px}}

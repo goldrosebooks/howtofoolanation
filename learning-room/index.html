@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Learning Room | How to Fool a Nation</title>
-    <meta name="description" content="Explore the presidential election and education and career card decks, 1856–2024.">
+    <meta name="description" content="Explore the presidential card decks and play the Powhatan episode quiz.">
     <link rel="canonical" href="https://www.howtofoolanation.com/learning-room/">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap">
     <link rel="stylesheet" href="learning.css">
     <link rel="stylesheet" href="study.css">
-    <script type="module" src="study.js"></script>
+    <script type="module" src="study.js?v=powhatan"></script>
     <script defer src="https://tracker.metricool.com/resources/be.js" onload="beTracker.t({hash: '946ada2d94468058700c2093c305a040'})"></script>
 </head>
 <body class="lr-page">
@@ -23,7 +23,7 @@
 <section class="lr-room" id="learning-room" aria-labelledby="learning-title">
     <div class="lr-room-inner">
         <h1 class="lr-room-title" id="learning-title">Learning Room</h1>
-        <p class="lr-room-intro">Explore 43 U.S. presidential elections, from 1856 to 2024. Open decks together to compare their cards.</p>
+        <p class="lr-room-intro">Explore 43 U.S. presidential elections or test yourself on a full episode of Let’s Party with Callan and Shane.</p>
         <div class="lr-decks">
             <a class="lr-tile" href="elections.html" aria-labelledby="tile-election" aria-describedby="description-election">
                 <img src="election-cover.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
@@ -39,6 +39,13 @@
                     <span class="lr-open">Open deck</span>
                 </div>
             </a>
+            <a class="lr-tile" data-quiz href="powhatan.html" aria-labelledby="tile-powhatan" aria-describedby="description-powhatan">
+                <img src="powhatan-episode-cover.jpg" alt="" width="850" height="478" loading="lazy" decoding="async">
+                <div><h2 id="tile-powhatan">Powhatan Quiz · This Land Is Whose Land?</h2>
+                    <p id="description-powhatan">Play all 18 questions from Season 1, Episode 1 of Let’s Party with Callan and Shane.</p>
+                    <span class="lr-open">Play the quiz</span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -48,7 +55,7 @@
             <h1 class="lr-room-title" id="study-title">Learning Room</h1>
             <button type="button" class="study-text-button study-open-all">Open all decks</button>
         </header>
-        <p id="study-tip" class="study-tip">Open a deck to study it, or open several to compare. Swipe each card left or right to change its year.</p>
+        <p id="study-tip" class="study-tip">Open a deck to study it, or open several to compare. Swipe presidential cards left or right to change years, or tap an answer in the quiz.</p>
         <details class="study-chooser" open>
             <summary>Choose decks <span class="study-selection-count"></span></summary>
             <div class="study-deck-list" role="group" aria-label="Choose open decks"></div>

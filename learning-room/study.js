@@ -93,7 +93,7 @@ async function startRoom() {
         mark.textContent = '+';
         button.append(cover, label, mark);
         list.append(button);
-        const deck = {id, name, url, button, mark, data: null};
+        const deck = {id, name, url, button, mark, data: null, quiz: tile.hasAttribute('data-quiz')};
         if (originalPicker && url.pathname === currentPage.pathname) {
             initialDeck = id;
             deck.data = Promise.resolve(readCards(main));
@@ -121,7 +121,7 @@ async function startRoom() {
     }, {rootMargin: '400px'}) : null;
 
     function activeYear() {
-        return open.get(lastUsed)?.year || open.values().next().value?.year;
+        return open.get(lastUsed)?.year || Array.from(open.values()).find(panel => panel.year)?.year;
     }
 
     function saveAddress() {
@@ -146,6 +146,7 @@ async function startRoom() {
     function updateMatchButtons() {
         const years = new Set(Array.from(open.values(), panel => panel.year).filter(Boolean));
         for (const panel of open.values()) {
+            if (panel.deck.quiz) continue;
             panel.match.hidden = !panel.cards || years.size < 2;
             if (!panel.match.hidden) panel.match.textContent = 'Match other decks to ' + panel.year;
         }
@@ -178,6 +179,17 @@ async function startRoom() {
             if (longList) chooser.open = true;
             deck.button.focus();
         });
+        if (deck.quiz) {
+            const frame = document.createElement('iframe');
+            frame.className = 'study-quiz-frame';
+            frame.title = deck.name;
+            frame.src = deck.url.href;
+            element.querySelector('.study-pending').replaceWith(frame);
+            element.querySelector('.study-content').remove();
+            open.set(id, {deck, element});
+            grid.append(element);
+            return;
+        }
         const panel = {
             deck, element, year, cards: null, image: element.querySelector('.study-image'),
             picker: element.querySelector('.study-year'), match: element.querySelector('.study-match')
@@ -265,7 +277,7 @@ async function startRoom() {
     function matchOthers(source) {
         const skipped = [];
         for (const panel of open.values()) {
-            if (panel === source || panel.year === source.year) continue;
+            if (panel.deck.quiz || panel === source || panel.year === source.year) continue;
             if (!panel.cards) {
                 panel.year = source.year;
                 continue;
