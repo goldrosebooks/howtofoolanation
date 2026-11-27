@@ -160,7 +160,7 @@
             <div class="mx-auto max-w-6xl px-5 sm:px-8">
                 <div class="grid gap-y-5 md:grid-cols-2 md:gap-x-10 lg:gap-x-14">
                     <div class="space-y-3">
-                        <p class="text-sm font-semibold tracking-wide text-amber-400">Season One premiere &middot; <time datetime="2026-12-01">December 1, 2026</time></p>
+                        <p class="text-sm font-semibold tracking-wide text-amber-400">Season One premiere &middot; <time id="powhatan-release" datetime="2026-12-01T06:00:00-06:00">December 1, 2026 at 6 a.m. Central</time></p>
                         <h2 id="show-title" class="max-w-xl text-balance font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">Let’s Party with Callan and Shane</h2>
                     </div>
                     <div class="space-y-4 md:col-start-2 md:row-span-2 md:row-start-1">
@@ -169,6 +169,12 @@
                     </div>
                     <a href="https://www.youtube.com/@howtofoolanation" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center gap-2 self-start justify-self-start rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-stone-950 hover:bg-amber-400 md:col-start-1 md:row-start-2"><i class="fa-brands fa-youtube" aria-hidden="true"></i>Visit the YouTube channel</a>
                 </div>
+                <template id="powhatan-full-episode">
+                    <div class="mx-auto mt-8 max-w-4xl">
+                        <iframe class="block aspect-video w-full rounded-xl" src="https://www.youtube-nocookie.com/embed/35HXIqZpCqU" title="This Land Is Whose Land? — Full Powhatan episode" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <a class="mt-2 inline-block text-sm font-semibold text-amber-400 underline underline-offset-4" href="https://youtu.be/35HXIqZpCqU">Watch the full Powhatan episode on YouTube</a>
+                    </div>
+                </template>
                 <div role="group" aria-label="Season One episode previews" class="mt-8 grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-6">
                     <figure class="min-w-0">
                         <p class="mb-2 text-center text-sm font-semibold leading-snug text-amber-400 sm:text-base"><span class="whitespace-nowrap">Season One,</span> <span class="block whitespace-nowrap min-[440px]:inline">Episode One</span></p>
@@ -274,6 +280,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        (() => {
+            const release = Date.parse(document.getElementById('powhatan-release').dateTime);
+            const player = document.getElementById('powhatan-full-episode');
+            let timer;
+
+            function showEpisodeAtRelease() {
+                clearTimeout(timer);
+                if (!player.isConnected) return;
+
+                const remaining = release - Date.now();
+                if (remaining > 0) {
+                    timer = setTimeout(showEpisodeAtRelease, Math.min(remaining, 86400000));
+                    return;
+                }
+                player.replaceWith(player.content.cloneNode(true));
+            }
+
+            showEpisodeAtRelease();
+            window.addEventListener('pageshow', showEpisodeAtRelease);
+        })();
+    </script>
 
     <script>
         (() => {
